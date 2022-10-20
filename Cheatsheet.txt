@@ -1,0 +1,76 @@
+﻿Syntax Cheatsheet
+
+
+
+Nmap: Port scanning
+
+nmap -options -targetIP
+
+https://www.stationx.net/nmap-cheat-sheet/
+
+
+
+Gobuster/Dirbuster: Brute force um zB versteckte Ordner auf webseiten zu finden
+
+gobuster dir -u <url> -w <path to wordlist>
+
+https://cheatography.com/imousrf/cheat-sheets/enumeration/
+
+
+
+Enum4linux: tool for enumerating information from Windows and Samba systems
+
+enum4linux.pl -options -targetIP
+
+https://labs.portcullis.co.uk/tools/enum4linux/
+
+
+
+Hydra: Brute forcing password and usernames (beides gleichzeitg oder nur eines von beiden usw...)
+
+hydra -l username(o. Liste) -P password(o. Liste) channel(bsp ssh://10.10.10.1)
+
+https://haxez.org/wp-content/uploads/2022/06/HaXeZ_Hydra_Cheat_Sheet.pdf
+
+
+
+linPEAS: Automatic privEsc tool das auf Victim gestartet werden muss
+
+https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS
+
+
+
+johnTheRipper: ./john --wordlist=password.list hashFile
+
+https://cheatsheet.haax.fr/passcracking-hashfiles/john_cheatsheet/
+
+
+
+hashcat: cracks hashes and identifies them
+
+hashcat [-options] [path to hashfile] [path to wordlist] 
+
+(-m für hashmode welcher mit hash-id.py rausgefunden werden kann)
+https://hashcat.net/wiki/doku.php?id=example_hashes
+https://hashes.com/en/tools/hash_identifier
+
+
+searchsploit: integarted Exploit DB tool
+
+find exploit: searchsploit [options] term1
+download exploit: searchsploit -m <name of exploit>
+
+
+
+
+Useful commands:
+
+scp: secure copie über ssh (zB für linPEAS) scp user@IP:/filename Destination
+find: https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538
+curl: loads source code of website and has different options
+strings: print the strings of printable characters in files (zb find strings in .jpeg)
+binwalk:tool for searching binary images for embedded files and executable code
+mv: Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY. mv [OPTION]... [-T] SOURCE DEST
+steghide:Steghide is a steganography program that is able to hide data in various kinds of image- and audio-files.
+
+
